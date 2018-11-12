@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="jquery.qrcode.min.js"></script>
+
+   
+<script>
+
+        function printpage() {
+            document.getElementById("stampante").style.display = "none";
+            window.print();
+        }
+                    
+    jQuery(function(){
+	jQuery('#output').qrcode({width: 50,height: 50,text: "size doesn't matter"});
+})
+
+    </script>
+
+    <style>
+        input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding: 10px;
+}
+input[type="number"] {
+    width:50px;
+ }
+
+ body{
+     width: 720px;
+ }
+#box-logo{
+    width: 120px;
+    height: 60px;
+    text-align: center;
+  
+
+}
+
+#titolo{
+    width: 478px;
+    height: 60px;
+    text-align: center;
+    
+}
+#seriale{
+    width: 105px;
+    height: 60px;
+    text-align: center;
+    
+}
+#ord{
+    width: 90px;
+    height: 60px;
+    text-align: left;
+    padding-top: 10px;
+    
+}
+#art{
+    width: 200px;
+    height: 60px;
+    text-align: left;
+    padding-top: 10px;
+    
+}
+#cod{
+    width: 210px;
+    height: 60px;
+    text-align: left;
+    padding-top: 10px;
+    
+}#qta{
+    width: 147px;
+    height: 60px;
+    text-align: left;
+    padding-top: 10px;
+
+}
+.border{
+   border: solid black 1px;
+}
+table{
+    border-collapse: collapse;
+    border: solid black 1px;
+}
+#table-second{
+    margin-top: 19px;
+}
+#type{
+    width: 233px;
+    height: 60px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgb(184, 184, 184);
+}
+#top{
+    width: 235px;
+    height: 60px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgb(184, 184, 184);
+    
+}
+#bot{
+    width: 235px;
+    height: 60px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgb(184, 184, 184);
+}
+.row-height{
+    height: 60px;
+}
+.input-size{
+    height: 180px;
+    width: 230px;
+    resize: none;
+    border: none;
+}
+#data{
+    border: none;
+    font-size: 15px;
+    
+}
+.text-center{
+    text-align: center;
+    font-size: 12px;
+}
+#firma{
+    width: 160px;
+    border: none;
+    border-bottom: 1px solid rgb(87, 87, 87);
+}
+
+#data{
+    text-align: left;
+    font-weight: normal;
+}
+#crema{
+    border: none;
+    border-bottom: 1px solid rgb(87, 87, 87);
+}
+#qta-input{
+    border: none;
+    border-bottom: 1px solid rgb(87, 87, 87);
+}
+#order{
+    font-size: 15px;
+    width: 80px;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid rgb(87, 87, 87);
+}
+#art-input{
+    font-size: 15px;
+    width: 190px;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid rgb(87, 87, 87);
+}
+#cod-input{
+    font-size: 15px;
+    width: 200px;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid rgb(87, 87, 87);
+}
+#qta-input-alto{
+    font-size: 15px;
+    width: 145px;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid rgb(87, 87, 87);
+}
+
+
+#stampante{
+    margin-top: 30px;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+#output{
+    max-width: 100%;
+    max-height: 100%;
+}
+</style>
+
+</head>
+
+<body>
+    <table>
+
+        <thead>
+            <tr>
+                <th id="box-logo" class="border"><img src="logo 2.png" alt=""></th>
+                <th id="titolo" class="border">CARTELLINO IDENTIFICAZIONE MATERIALE</th>
+                <th id="seriale" class="border">N001-7-03-02</th>
+            </tr>
+
+    </table>
+    <table id="table-second">
+        <tr>
+        <tr>
+            <td id="ord" class="border">ORDINE N. <P><input id="order" type="text"></P></td>
+            <td id="art" class="border">ARTICOLO:<P><input id="art-input" type="text"></P></td>
+            <td id="cod" class="border">CODICE:<P><input id="cod-input" type="text"></P></td>
+            <td id="qta" class="border">Q.TA':<P><input id="qta-input-alto" type="text"></P></td>
+            <td id="qr-code" class="border"><div id="output"></div></td>
+        </tr>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td id="type" class="border">VERIFICA
+                <!-- <select name='…'>
+            <option value='A'> COLLAUDO </option>
+            <option value='B'>VERIFICA</option>
+            </select> -->
+            </td>
+            <td id="top" class="border">TOP
+                <input type="checkbox">
+            </td>
+            <td id="bot" class="border">BOT
+                <input type="checkbox">
+            </td>
+        </tr>
+        <tr class="row-height">
+            <th id="data" class="border">DATA:<input id="data" type="date"></th>
+            <th class="border text-center">NOTE-ANOMALIE LATO TOP</th>
+            <th class="border text-center">NOTE-ANOMALIE LATO TOP</th>
+        </tr>
+        <tr class="row-height">
+            <td class="border">QUANTITA':<input id="qta-input" type="number" name="pin"></td>
+            <td class="border" rowspan="3"><textarea name="" id="" maxlength="372" class="input-size"></textarea></td>
+            <td class="border" rowspan="3"><textarea name="" id="" maxlength="372" class="input-size"></textarea></td>
+        </tr>
+        <tr class="row-height">
+            <td class="border">CREMA UTILIZATA <p> <input id="crema" type="text"></p>
+            </td>
+        </tr>
+        <tr class="row-height">
+            <td class="border">FIRMA:<input id="firma" type="text"></td>
+        </tr>
+    </table>
+
+    <button id="stampante" onclick="printpage()">STAMPA</button>
+
+  
+
+
+</body>
+
+</html>
